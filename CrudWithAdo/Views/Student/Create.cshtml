@@ -1,0 +1,51 @@
+﻿@model CrudWithAdo.Models.Student
+@{
+    ViewData["Title"] = "Create Student";
+}
+
+
+<h1>Create Student</h1>
+<hr />
+<h3>Fill the form</h3>
+
+<form asp-action="Create">
+    <!-- 2 column grid layout with text inputs for the first and last names -->
+    <div class="row mb-4">
+        <div class="col">
+            <div class="form-outline">
+                <input type="Number" id="form6Example22" class="form-control" asp-for="Id" />
+                <label class="form-label" for="form6Example1">Id</label>
+            </div>
+        </div>
+        <div class="col">
+            <div class="form-outline">
+                <input type="text" id="form6Example1" class="form-control" asp-for="FirstName" />
+                <label class="form-label" for="form6Example1">First name</label>
+            </div>
+        </div>
+        <div class="col">
+            <div class="form-outline">
+                <input type="text" id="form6Example2" asp-for="LastName" class="form-control" />
+                <label class="form-label" for="form6Example2">Last name</label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Text input -->
+    <div class="form-outline mb-4">
+        <input type="text" id="form6Example3" asp-for="City" class="form-control" />
+        <label class="form-label" for="form6Example3">City</label>
+    </div>
+
+    <!-- Text input -->
+    <div class="form-outline mb-4">
+        <input type="text" asp-for="MobileNo" id="form6Example4" class="form-control" />
+        <label class="form-label" for="form6Example4">Mobile No</label>
+    </div>
+
+
+ 
+
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary btn-block mb-4" value="Create" >Submit</button>
+</form>

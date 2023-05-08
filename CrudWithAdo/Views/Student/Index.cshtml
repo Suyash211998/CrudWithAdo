@@ -1,0 +1,40 @@
+﻿
+
+@{
+    ViewData["Title"] = "All Student Details";
+}
+
+<button>
+    <a asp-action="Create">Create New</a>
+</button>
+<h1>All Students</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">FirstName</th>
+            <th scope="col">LastName</th>
+            <th scope="col">City</th>
+            <th scope="col">Mobile No</th>
+            <th scope="col">Edit</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var student in Model)
+        {
+            <tr>
+            <th scope="row">@student.Id</th>
+            <td>@student.FirstName</td>
+            <td>@student.LastName</td>
+            <td>@student.City</td>
+            <td>@student.MobileNo</td>
+            <td>
+                    @Html.ActionLink("Edit", "Edit", new {  id=student.Id })
+            </td>
+        </tr>
+        }
+        
+        
+    </tbody>
+</table>
